@@ -1,0 +1,9 @@
+# Ignore compiled Python source files
+**/*.pyc
+**/__pycache__
+
+# Miscellaneous
+**/.DS_Store
+
+# Ignore virtualenv files
+**/venv

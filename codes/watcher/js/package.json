@@ -1,0 +1,18 @@
+{
+  "name": "watcher",
+  "version": "1.0.0",
+  "description": "watcher-js application",
+  "main": "watcher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "W. Magon",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.6.1",
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.4"
+  }
+}
