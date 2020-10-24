@@ -1,5 +1,6 @@
 # data-jobs-terraform
 ### assumptions and considerations:
+  - *make* commands should be used instead of *terraform* (e.g. *make plan*, *make apply*
   - *common* module contains resources used in all environments
   - Batch Queues can contain many Compute Environments
   - Compute Environment can be added in multiple Queues

@@ -1,0 +1,19 @@
+version: '2.4'
+
+services:
+  redmine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    # volumes:
+    #   - ./:/usr/src/redmine/files
+    networks:
+      - postgres  
+    ports: 
+      - 80:3000
+    env_file: $DB_CONFIG_FILE
+
+networks:
+  postgres:
+    external: true

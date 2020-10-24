@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    environment {
+        DB_CONFIG_FILE = credentials('db_config_redmine')
+    }
+    stages {
+        stage('Clone source') {
+            steps {
+                git branch: BRANCH, credentialsId: 'jenkins_access_to_bitbucket_regile_workspace', url: 'git@bitbucket.org:regile/redmine.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh """
+                    docker-compose down
+                    # docker-compose pull
+                    docker-compose up -d --build
+                """
+            }
+        }
+    }
+
+}
